@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: rgb(218, 218, 218);
+}
+
+li {
+  float: right;
+  
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.home) {
+  text-decoration: underline;
+}
+
+ul > li:last-child > a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="" href="#home">장바구니</a></li>
+  <li><a href="#news">마이페이지</a></li>
+  <li><a href="#contact">회원가입</a></li>
+  <li><a href="#contact">로그인</a></li>
+  <li style="float:left"><a class="home" href="#about">홈</a></li>
+</ul>
+
+</body>
+</html>
+

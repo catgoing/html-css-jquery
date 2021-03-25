@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+ul{list-style:none; margin:0px; padding:0px;}
+.one{float:left;}
+.one > li{float:left;}
+.one ul{display:none;position:absolute;left:90px; top:25px; }
+.one li:hover > ul {display:block;}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="one"> 
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a>
+                  <ul>
+                     <li><a href="#">sub menu1</a></li>
+                     <li><a href="#">sub menu2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">menu3</a></li>
+              </ul> 
+        </nav>
+    </header>
+</body>
+</html>
+

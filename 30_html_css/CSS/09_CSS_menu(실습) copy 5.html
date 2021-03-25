@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  margin: 0;
+  overflow: auto;
+}
+
+ul{
+  list-style :none;
+  margin: 0 0 0 20px ;
+  padding:0 ;
+}
+
+ul li:first-child{
+  font-weight: bold;
+  margin: 20px 0 2px 0;  
+}
+
+li a {
+  font-size: 0.9em;
+  margin: 0 0 1px 5px;
+  text-decoration: none;
+}
+
+li:last-child{
+  margin: 0 0 5px 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  overflow: hidden;
+}
+
+/* Left and right column */
+.column.side {
+  margin: auto;
+  width: 150px;
+  height : 500px;
+  /*position: absolute;*/
+}
+
+/* Middle column */
+
+.column.middle {
+  text-align: center;
+  line-height: 1000px;
+  width: 750px;
+  height : 800px;
+  left : 150px;
+  position: absolute;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.history{
+  margin: 20px 0 0 0;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (min-width: 100px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+@media (max-height: 500px) {
+  .column.side, .column.middle {
+    height: 80%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Header</h2>
+</div>
+
+<div class="row">
+  <div class="column side" style="background-color:#aaa;">
+    <ul>
+      <li class="history">나의 주문내역</li>
+      <li><a href="">주문 조회</a></li>
+      <li><a href="">취소 신청</a></li>
+    </ul>
+    <ul>
+      <li>관심상품</li>
+      <li><a href="">찜리스트</a></li>
+      <li><a href="">장바구니</a></li>
+    </ul>
+    <ul>
+      <li>나의 글</li>
+      <li><a href="">나의 리뷰</a></li>
+      <li><a href="">나의 댓글</a></li>
+    </ul>
+    <ul>
+
+    </ul>
+  </div>
+  <div class="column middle">Column</div>
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</div>
+
+
+
+</body>
+</html>

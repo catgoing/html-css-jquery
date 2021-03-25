@@ -1,0 +1,22 @@
+        h1 { background-color: aqua; }
+        h2 { background-color: yellow; }
+        
+        /* 선택자(.) class 속성을 의미 */
+        .red { background-color: red; }
+        .green { background-color: green;}
+        .yellow { background-color: yellow; }
+        
+        /* 선택자(#) id 속성을 의미 */
+        #yellow { background-color: yellow; }
+        
+        /* 동일대상에 동일가중치로 동일속성이 중복 적용된 경우
+        나중에 정의된 속성값이 적용된다 */
+        h2 { background-color: orange; } 
+        
+        /* 선택자 우선순위 : id, class, 태그(tag) */
+        p { background-color: gray; }
+        div > p { background-color: purple; }
+        
+        /* green클래스 중 p태그에 있는 green 클래스만 대상으로
+        가중치가 높아져서 우선 적용 */
+        p.green { background-color: greenyellow; }
