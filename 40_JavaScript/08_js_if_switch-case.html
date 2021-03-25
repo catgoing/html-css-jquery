@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS : if , switch~case</title>
+<script>
+    // if (조건식) { }
+    // if (조건식) { } else { }
+    // if (조건식) { } else if { } else if {} else {}
+    if (true) {
+        document.write("if문이 true인 경우 출력", "<br>");
+    }
+    let bool = confirm("true 출력 <확인>선택, false출력 <취소>선택");
+    if (bool) {
+        document.write("확인 선택 - true", "<br>");
+    } else {
+        document.write("취소 선택 - false", "<br>");
+    }
+    document.write("<hr>");
+    
+    //================================================
+    /* (실습) 점수를 입력받고(prompt), 점수에 따라 평가하고 결과 화면 출력
+    90이상: A, 80이상: B, 70이상: C, 70미만: D
+    출력형태 : 점수 90 - 평가결과: A
+    (if 문으로 처리)
+    *********************/
+    var jumsu = prompt("점수를 입력하세요(0~100)", 0);
+    let result = "평가안됨";
+    //NaN : Not a Number 숫자가아님
+    //isNaN : 숫자가 아니냐? 결과: 숫자면 false, 숫자가 아니면 true
+    alert(jumsu + " isNaN() : " + isNaN(jumsu)); 
+    if (isNaN(jumsu)) {
+        //숫자가 아닌 경우
+        result = "숫자가 아님(NaN)";
+    } else if (jumsu < 0 || jumsu > 100) {
+        result = "정상범위(0~100) 아님"
+    } else if (jumsu >= 90 && jumsu <= 100) {
+        result = "A";
+    } else if (jumsu >= 80) {
+        result = "B";
+    } else if (jumsu >= 70) {
+        result = "C";
+    } else {
+        result = "D";
+    }
+    
+    document.write("<h3>점수: "+ jumsu + " - 평가결과: " + result + "</h3>");
+    document.write('<hr>');
+    
+    //============================================
+    let divJumsu = Math.floor(jumsu / 10); // 88 / 10 -> 8.8 -> 8
+    switch (divJumsu) {
+        case 10 : 
+            //result = "A";
+            //break;
+        case 9 :
+            result = "A";
+            break;
+        case 8 :
+            result = "B";
+            break;
+        case 7 :
+            result = "C";
+            break;
+        default :
+            result = "D";
+            break;
+    }
+    document.write("<h3>점수: "+ jumsu + " - 평가결과(switch): " + result + "</h3>");
+    document.write('<hr>');
+</script>
+</head>
+<body>
+</body>
+
+    
+<br><br><br><br><br><br><br><br><br><br><br>    
+<br><br><br><br><br><br><br><br><br><br><br>    
+</html>
+
+
+
+
+
+
+
+
+
+
